@@ -9,6 +9,9 @@
 # production
 /build
 
+# nova
+/.nova
+
 # misc
 .DS_Store
 .env.local
