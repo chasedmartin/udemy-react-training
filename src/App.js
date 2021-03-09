@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium, { StyleRoot } from 'radium';
 import Person from './Person/Person';
 
 class App extends Component {
   state = {
     persons: [
-      { id: 'asdf1', name: "Chase", age: 30},
-      { id: 'qwer2', name: "Richard", age: 34},
-      { id: 'zxcv3', name: "Virag", age: 24}
+      { id: 'person1', name: "Chase", age: 30},
+      { id: 'person2', name: "Richard", age: 34},
+      { id: 'person3', name: "Virag", age: 24}
     ],
     otherState: 'some other value',
     showPersons: false
@@ -89,7 +88,6 @@ class App extends Component {
     }
 
      return (
-       <StyleRoot>
       <div className="App">
         <h1>Hi, I'm a react app</h1>
         <p className={classes.join(' ')}>This is really working!</p>
@@ -98,10 +96,9 @@ class App extends Component {
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
         {persons}
       </div>
-      </StyleRoot>
     );
     //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
 
-export default Radium(App);
+export default App;
